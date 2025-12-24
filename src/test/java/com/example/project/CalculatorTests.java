@@ -60,7 +60,7 @@ class CalculatorTests {
 		assertEquals(30123, calculator.add(s1, s2), "short -> int auto-cast");
 		assertEquals(66, calculator.add(c1, c2), "char -> int auto-cast");
 		assertEquals(3, calculator.add((int) l1, (int) l2), "long -> int avec cast explicite");
-		assertEquals(65534, calculator.add(sMax, sMax - 1), "short max conserve la valeur apres cast");
+		assertEquals(65533, calculator.add(sMax, sMax - 1), "short max conserve la valeur apres cast");
 		assertEquals(-129, calculator.add(bMin, -2), "byte min conserve la valeur apres cast");
 		assertEquals(254, calculator.add(bMax, bMax), "byte max conserve la valeur apres cast");
 	}

@@ -20,5 +20,8 @@ jobs:
           java-version: 17
           cache: maven
 
-      - name: Build and test
-        run: mvn -B verify
+      - name: test
+        run: mvn clean test
+
+      - name: jacoco report
+        run: mvn jacoco:report
